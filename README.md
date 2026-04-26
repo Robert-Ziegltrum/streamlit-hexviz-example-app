@@ -30,15 +30,17 @@ pip install streamlit streamlit-hexviz pandas
 
 ## 🗂️ Dataset
 
-The app uses the **European Truck Parking Locations** dataset from Kaggle:
+The app uses the **European Truck Parking Locations** and **London Bike and Mobility** dataset from Kaggle:
 
 📎 [https://www.kaggle.com/datasets/mexwell/european-truck-parking-locations](https://www.kaggle.com/datasets/mexwell/european-truck-parking-locations)
 
+📎 [https://www.kaggle.com/datasets/prashantbrl/london-open-data-bike-and-mobility](https://www.kaggle.com/datasets/prashantbrl/london-open-data-bike-and-mobility)
 Download the CSV and place it in the project root:
 
 ```
 data/
 └── truck_parking_europe.csv
+└── bike_trips.csv
 ```
 
 ---
@@ -46,7 +48,8 @@ data/
 ## 🚀 Running the app
 
 ```bash
-streamlit run app.py
+streamlit run app.py 
+streamlit run app_bike_trips.py
 ```
 
 The app will open automatically in your browser.
@@ -93,7 +96,9 @@ shv.h3_map(df, lat="lat", lon="lon",
 .
 data/
 └── truck_parking_europe.csv
+└── bike_trips.csv
 ├── app.py                      # Streamlit application entry point
+├── app_bike_trips.py           # Streamlit application entry point
 ├── requirements.txt
 └── README.md
 ```
@@ -113,6 +118,7 @@ pandas
 ## 🤝 Acknowledgements
 
 - Dataset: [mexwell on Kaggle](https://www.kaggle.com/datasets/mexwell/european-truck-parking-locations)
+- Dataset: [Kaggle Data Sets](https://www.kaggle.com/datasets/prashantbrl/london-open-data-bike-and-mobility)
 - Map tiles: © [CARTO](https://carto.com/), © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors
 - H3 library: [Uber H3](https://h3geo.org/)
 
